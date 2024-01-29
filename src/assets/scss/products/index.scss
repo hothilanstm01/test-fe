@@ -1,0 +1,58 @@
+.wrapper-product {
+    background: $yellow;
+    border-radius: 2rem;
+    width: 100vw;
+    height: 65rem;
+    .search-product {
+        width: 100%;
+        padding: 1.6rem;
+        @include flex(flex-end, flex-end);
+        .input-search {
+            width: 40%;
+        }
+    }
+    .loading {
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+    }
+    .product-list {
+        overflow: hidden;
+        overflow-y: scroll;
+        display: grid;
+        gap: 1.6rem;
+        grid-template-columns: repeat(5, minmax(0px, 1fr));
+        padding: 1.6rem;
+        height: 55rem;
+        .item {
+            border-radius: 0.8rem;
+            background: white;
+            height: 35rem;
+            .inner-item {
+                .image {
+                    width: 100%;
+                    height: 20rem;
+                    border-top-right-radius: 0.8rem;
+                    border-top-left-radius: 0.8rem;
+                    object-fit: cover;
+                }
+                .content-inner {
+                    padding: 1.6rem;
+                    text-align: center;
+                    .title {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        &:hover {
+                            color: blue;
+                        }
+                    }
+                    .price {
+                        font-weight: 600;
+                        color: $red;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
